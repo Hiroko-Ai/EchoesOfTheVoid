@@ -13,3 +13,27 @@ config_version=5
 config/name="EchoesOfTheVoid"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
+[input]
+
+"move_left (Left Arrow, A)"={
+"deadzone": 0.5,
+"events": []
+}
+"move_right (Right Arrow, D)"={
+"deadzone": 0.5,
+"events": []
+}
+"jump (Space)"={
+"deadzone": 0.5,
+"events": []
+}
+"activate_echo (E)"={
+"deadzone": 0.5,
+"events": []
+}

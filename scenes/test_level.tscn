@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://iyifynr0uv77"]
+
+[ext_resource type="PackedScene" uid="uid://cjguo6inex813" path="res://scenes/player.tscn" id="1_y0vq7"]
+[ext_resource type="PackedScene" uid="uid://t6af8vfd3npn" path="res://scenes/echo_manager.tscn" id="2_3yx5c"]
+[ext_resource type="PackedScene" uid="uid://d2a4jwa4s3f7o" path="res://scenes/echo_point.tscn" id="3_u2r36"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8hdka"]
+size = Vector2(1280, 100)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_phejb"]
+size = Vector2(1280, 100)
+
+[node name="TestLevel" type="Node2D"]
+position = Vector2(640, 169)
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(0, 500)
+shape = SubResource("RectangleShape2D_8hdka")
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground"]
+position = Vector2(0, 500)
+texture = SubResource("PlaceholderTexture2D_phejb")
+
+[node name="EchoPoint" parent="." groups=["echo_points"] instance=ExtResource("3_u2r36")]
+position = Vector2(450, 376)
+
+[node name="EchoPoint2" parent="." groups=["echo_points"] instance=ExtResource("3_u2r36")]
+position = Vector2(-320, 367)
+
+[node name="EchoPoint3" parent="." groups=["echo_points"] instance=ExtResource("3_u2r36")]
+position = Vector2(-115, 246)
+
+[node name="EchoManager" parent="." instance=ExtResource("2_3yx5c")]
+
+[node name="Player" parent="." instance=ExtResource("1_y0vq7")]
+position = Vector2(51, 366)

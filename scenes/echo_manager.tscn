@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://t6af8vfd3npn"]
+
+[ext_resource type="Script" path="res://scripts/echo_manager.gd" id="1_wu6ck"]
+
+[node name="EchoManager" type="Node"]
+script = ExtResource("1_wu6ck")
